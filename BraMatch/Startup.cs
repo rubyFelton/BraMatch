@@ -31,9 +31,9 @@ namespace BraMatch
             services.AddDbContext<UserContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"),
-            x => x.MigrationsAssembly("EntityDataAccess.Migrations")));
+                    x => x.MigrationsAssembly("EntityDataAccess")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<UserContext>();
+                .AddEntityFrameworkStores<EntityDataAccess.DataAccess.UserContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
