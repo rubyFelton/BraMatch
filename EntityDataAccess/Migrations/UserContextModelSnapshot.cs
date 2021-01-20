@@ -65,7 +65,7 @@ namespace EntityDataAccess.Migrations
                     b.Property<string>("CupSize")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MesureSystem")
+                    b.Property<string>("MeasureSystem")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OtherSize")
@@ -86,7 +86,7 @@ namespace EntityDataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Convertable")
+                    b.Property<bool>("Convertible")
                         .HasColumnType("bit");
 
                     b.Property<string>("Cup")
