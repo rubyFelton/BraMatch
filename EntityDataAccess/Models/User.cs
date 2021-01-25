@@ -22,6 +22,7 @@ namespace EntityDataAccess.Models
         public string DisplayName { get; set; }
         [Required]
         public string Password { get; set; }
+        //password to be deleted later, should only be in identity login db
         public string Region { get; set; }
         public string MeasureSystem { get; set; }
         [Column(TypeName = "decimal(5,2)")]

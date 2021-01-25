@@ -6,9 +6,9 @@ using System.Text;
 
 namespace BraMatch.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class LoginDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public LoginDbContext(DbContextOptions<LoginDbContext> options)
             : base(options)
         {
         }

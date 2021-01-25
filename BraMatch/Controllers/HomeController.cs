@@ -20,6 +20,7 @@ namespace BraMatch.Controllers
 
         public IActionResult Index()
         {
+            string user = User.Identity.Name;
             return View();
         }
 
