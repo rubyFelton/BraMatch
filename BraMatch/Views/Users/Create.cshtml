@@ -1,0 +1,80 @@
+﻿@model EntityDataAccess.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Email" />
+            <div class="form-group">
+                <label asp-for="DisplayName" class="control-label">Display Name</label>
+                <input asp-for="DisplayName" class="form-control" />
+                <span asp-validation-for="DisplayName" class="text-danger"></span>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Password" />
+            <div class="form-group">
+                <label asp-for="Region" class="control-label"></label>
+                <input asp-for="Region" class="form-control" />
+                <span asp-validation-for="Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MeasureSystem" class="control-label">Measurement System</label>
+                <input asp-for="MeasureSystem" class="form-control" />
+                <span asp-validation-for="MeasureSystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BandMeasure" class="control-label">Band Measurement</label>
+                <input asp-for="BandMeasure" class="form-control" />
+                <span asp-validation-for="BandMeasure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WidestMeasure" class="control-label">Widest Measurement</label>
+                <input asp-for="WidestMeasure" class="form-control" />
+                <span asp-validation-for="WidestMeasure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointMeasure" class="control-label">Point to Point Measurement</label>
+                <input asp-for="PointMeasure" class="form-control" />
+            <span asp-validation-for="PointMeasure" class="text-danger"></span>
+            </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Implants" /> @Html.DisplayNameFor(model => model.Implants)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Reduction" /> @Html.DisplayNameFor(model => model.Reduction)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
